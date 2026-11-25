@@ -1,0 +1,1327 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>九一麻花制作厂 - 传承老手艺 | 一根麻花的百年酥脆</title>
+<meta name="description" content="九一麻花制作厂，百年手工麻花制作工艺传承者，精选优质面粉与纯正植物油，每日现炸现卖，酥脆香甜，让每一根麻花都承载着老味道与匠心。">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --gold:#c9a227;
+  --gold-light:#e8c95a;
+  --gold-dark:#8a6d14;
+  --brown:#3d2817;
+  --brown-light:#5c3d24;
+  --cream:#fdf6e3;
+  --cream-dark:#f5e9c8;
+  --red:#b83a2e;
+  --red-dark:#8e2a20;
+  --text-dark:#2a1c10;
+  --text-mid:#6b5240;
+  --text-light:#9a8570;
+  --border:#e0d2b0;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;
+  background:var(--cream);
+  color:var(--text-dark);
+  line-height:1.7;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4{font-family:"Georgia","STZhongsong","SimSun",serif;font-weight:700;letter-spacing:.02em}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+img{max-width:100%;display:block}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.btn{
+  display:inline-block;padding:14px 36px;border-radius:2px;
+  font-size:15px;letter-spacing:.1em;cursor:pointer;
+  transition:all .35s ease;border:none;font-family:inherit;
+}
+.btn-primary{background:var(--gold);color:var(--brown);font-weight:600}
+.btn-primary:hover{background:var(--gold-dark);color:#fff;transform:translateY(-2px);box-shadow:0 8px 20px rgba(138,109,20,.3)}
+.btn-outline{background:transparent;color:var(--gold-light);border:1px solid var(--gold-light)}
+.btn-outline:hover{background:var(--gold-light);color:var(--brown);transform:translateY(-2px)}
+.section-head{text-align:center;margin-bottom:56px}
+.section-head .kicker{
+  display:inline-block;font-size:13px;letter-spacing:.35em;color:var(--gold-dark);
+  text-transform:uppercase;margin-bottom:12px;position:relative;padding:0 24px;
+}
+.section-head .kicker::before,.section-head .kicker::after{
+  content:"";position:absolute;top:50%;width:18px;height:1px;background:var(--gold);
+}
+.section-head .kicker::before{left:0}
+.section-head .kicker::after{right:0}
+.section-head h2{font-size:clamp(26px,3.4vw,40px);color:var(--brown);margin-bottom:14px}
+.section-head p{color:var(--text-mid);font-size:15px;max-width:620px;margin:0 auto}
+
+/* ===== 顶部导航 ===== */
+.topbar{
+  background:var(--brown);color:var(--cream-dark);font-size:12.5px;
+  letter-spacing:.08em;padding:8px 0;
+}
+.topbar .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px}
+.topbar span{opacity:.85}
+header.nav{
+  position:sticky;top:0;z-index:100;background:rgba(253,246,227,.94);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--border);
+  transition:box-shadow .3s;
+}
+header.nav.scrolled{box-shadow:0 4px 24px rgba(60,40,23,.1)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-mark{
+  width:46px;height:46px;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,var(--gold-light),var(--gold-dark));
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-family:Georgia,serif;font-weight:700;font-size:19px;
+  box-shadow:inset 0 -2px 6px rgba(0,0,0,.2);
+}
+.logo-text b{display:block;font-family:Georgia,"STZhongsong",serif;font-size:19px;color:var(--brown);letter-spacing:.06em;line-height:1.2}
+.logo-text small{font-size:10.5px;letter-spacing:.22em;color:var(--text-light);text-transform:uppercase}
+.nav-links{display:flex;gap:34px}
+.nav-links a{font-size:14.5px;color:var(--text-mid);position:relative;padding:6px 0;transition:color .3s}
+.nav-links a::after{
+  content:"";position:absolute;left:0;bottom:0;width:0;height:2px;
+  background:var(--gold);transition:width .3s;
+}
+.nav-links a:hover{color:var(--brown)}
+.nav-links a:hover::after{width:100%}
+.nav-cta{display:flex;align-items:center;gap:16px}
+.nav-cta .phone{font-size:14px;color:var(--brown);font-weight:600;font-family:Georgia,serif}
+.nav-cta .phone small{display:block;font-size:10px;color:var(--text-light);letter-spacing:.15em;font-weight:400}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
+.burger span{width:24px;height:2px;background:var(--brown);transition:.3s}
+
+/* ===== HERO ===== */
+.hero{
+  position:relative;background:linear-gradient(135deg,var(--brown) 0%,var(--brown-light) 60%,#7a5432 100%);
+  color:var(--cream);overflow:hidden;padding:88px 0 96px;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:radial-gradient(circle at 20% 20%,rgba(201,162,39,.16) 0%,transparent 45%),
+                   radial-gradient(circle at 80% 80%,rgba(201,162,39,.1) 0%,transparent 50%);
+}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:10px;padding:7px 18px;margin-bottom:26px;
+  border:1px solid rgba(232,201,90,.4);border-radius:40px;font-size:12.5px;
+  letter-spacing:.15em;color:var(--gold-light);background:rgba(232,201,90,.06);
+}
+.hero-badge .dot{width:7px;height:7px;border-radius:50%;background:var(--gold-light);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.8)}}
+.hero h1{font-size:clamp(40px,5.4vw,68px);line-height:1.12;color:#fff;margin-bottom:8px;letter-spacing:.04em}
+.hero h1 .accent{color:var(--gold-light);display:block;font-size:.42em;letter-spacing:.3em;margin-top:18px;font-weight:400}
+.hero-slogan{font-size:clamp(17px,1.7vw,21px);color:var(--gold-light);letter-spacing:.22em;margin:26px 0 18px;font-family:Georgia,serif}
+.hero p.desc{font-size:15.5px;color:rgba(253,246,227,.82);max-width:500px;margin-bottom:38px;line-height:1.9}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap}
+.hero-stats{display:flex;gap:40px;margin-top:52px;flex-wrap:wrap;border-top:1px solid rgba(232,201,90,.2);padding-top:30px}
+.hero-stats .stat b{display:block;font-family:Georgia,serif;font-size:30px;color:var(--gold-light);line-height:1.2}
+.hero-stats .stat span{font-size:12.5px;letter-spacing:.1em;color:rgba(253,246,227,.65)}
+
+.hero-visual{position:relative;display:flex;justify-content:center;align-items:center}
+.twist-wrap{
+  position:relative;width:min(100%,400px);aspect-ratio:1/1;
+  display:flex;align-items:center;justify-content:center;
+}
+.twist-ring{
+  position:absolute;inset:0;border-radius:50%;
+  border:1px dashed rgba(232,201,90,.35);animation:spin 40s linear infinite;
+}
+.twist-ring.inner{inset:12%;border-style:solid;border-color:rgba(232,201,90,.18);animation-direction:reverse;animation-duration:28s}
+@keyframes spin{to{transform:rotate(360deg)}}
+.twist-svg{width:62%;filter:drop-shadow(0 20px 40px rgba(0,0,0,.4));animation:float 6s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-18px) rotate(4deg)}}
+.hero-tag{
+  position:absolute;background:rgba(42,28,16,.75);border:1px solid rgba(232,201,90,.3);
+  backdrop-filter:blur(6px);padding:12px 18px;border-radius:4px;font-size:12.5px;
+  color:var(--cream);letter-spacing:.06em;display:flex;align-items:center;gap:10px;
+}
+.hero-tag i{width:8px;height:8px;border-radius:50%;background:var(--gold-light);flex-shrink:0}
+.hero-tag.t1{top:6%;right:0}
+.hero-tag.t2{bottom:12%;left:0}
+.hero-tag.t3{bottom:34%;right:-4%}
+
+/* ===== 走马灯 ===== */
+.marquee{
+  background:var(--gold);overflow:hidden;padding:14px 0;white-space:nowrap;
+  border-top:1px solid var(--gold-dark);border-bottom:1px solid var(--gold-dark);
+}
+.marquee-track{display:inline-flex;animation:scroll 32s linear infinite}
+.marquee span{
+  font-family:Georgia,"STZhongsong",serif;font-size:15px;letter-spacing:.22em;
+  color:var(--brown);padding:0 34px;display:inline-flex;align-items:center;gap:34px;
+}
+.marquee span::after{content:"✦";font-size:12px;color:var(--brown-light)}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ===== 品牌介绍 ===== */
+.about{padding:100px 0;background:var(--cream)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about-visual{position:relative}
+.about-frame{
+  position:relative;border-radius:4px;overflow:hidden;
+  background:linear-gradient(160deg,var(--brown-light),var(--brown));
+  aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 30px 60px rgba(61,40,23,.25);
+}
+.about-frame svg{width:70%}
+.about-frame::after{
+  content:"";position:absolute;inset:18px;border:1px solid rgba(232,201,90,.35);
+  border-radius:2px;pointer-events:none;
+}
+.about-badge{
+  position:absolute;bottom:-26px;right:-16px;background:var(--red);color:#fff;
+  width:118px;height:118px;border-radius:50%;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;
+  box-shadow:0 14px 30px rgba(142,42,32,.35);transform:rotate(-8deg);
+}
+.about-badge b{font-family:Georgia,serif;font-size:32px;line-height:1}
+.about-badge span{font-size:11px;letter-spacing:.1em;margin-top:4px;opacity:.9}
+.about-frame.decor-corner{position:absolute}
+.about-text .section-head{text-align:left;margin-bottom:28px}
+.about-text .section-head .kicker{padding:0 0 0 0}
+.about-text .section-head .kicker::before,.about-text .section-head .kicker::after{display:none}
+.about-text h2{font-size:clamp(26px,3vw,36px);color:var(--brown);margin-bottom:18px}
+.about-text p{color:var(--text-mid);font-size:15px;margin-bottom:18px;line-height:1.95}
+.about-features{display:grid;grid-template-columns:1fr 1fr;gap:20px 28px;margin-top:32px}
+.about-feature{display:flex;gap:14px;align-items:flex-start}
+.about-feature .ic{
+  width:38px;height:38px;flex-shrink:0;border-radius:50%;background:var(--cream-dark);
+  display:flex;align-items:center;justify-content:center;color:var(--gold-dark);
+}
+.about-feature b{display:block;font-size:15px;color:var(--brown);margin-bottom:3px}
+.about-feature small{font-size:12.5px;color:var(--text-light);line-height:1.5}
+
+/* ===== 产品 ===== */
+.products{padding:100px 0;background:var(--cream-dark);position:relative;overflow:hidden}
+.products::before{
+  content:"";position:absolute;top:-100px;right:-100px;width:340px;height:340px;
+  border-radius:50%;background:rgba(201,162,39,.09);
+}
+.products::after{
+  content:"";position:absolute;bottom:-120px;left:-80px;width:300px;height:300px;
+  border-radius:50%;border:1px dashed rgba(201,162,39,.25);
+}
+.product-grid{
+  position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:30px;
+}
+.product-card{
+  background:var(--cream);border:1px solid var(--border);border-radius:4px;
+  padding:32px 28px;transition:all .4s ease;position:relative;overflow:hidden;
+}
+.product-card::before{
+  content:"";position:absolute;top:0;left:0;width:100%;height:3px;
+  background:linear-gradient(90deg,var(--gold),var(--gold-light));
+  transform:scaleX(0);transform-origin:left;transition:transform .4s;
+}
+.product-card:hover{transform:translateY(-8px);box-shadow:0 24px 48px rgba(61,40,23,.14);border-color:var(--gold)}
+.product-card:hover::before{transform:scaleX(1)}
+.product-icon{
+  width:74px;height:74px;border-radius:50%;margin-bottom:22px;
+  background:linear-gradient(145deg,var(--gold-light),var(--gold));
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 10px 22px rgba(201,162,39,.3);
+}
+.product-icon svg{width:44px;height:44px}
+.product-card h3{font-size:20px;color:var(--brown);margin-bottom:6px}
+.product-card .tagline{font-size:12.5px;color:var(--gold-dark);letter-spacing:.14em;margin-bottom:14px}
+.product-card p{font-size:14px;color:var(--text-mid);line-height:1.85;margin-bottom:20px}
+.product-meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.product-meta em{
+  font-style:normal;font-size:11.5px;padding:4px 12px;border-radius:30px;
+  background:var(--cream-dark);color:var(--brown-light);letter-spacing:.05em;
+}
+.product-link{font-size:13.5px;color:var(--red);font-weight:600;letter-spacing:.06em;display:inline-flex;align-items:center;gap:6px}
+.product-link:hover{gap:11px;transition:gap .3s}
+
+/* ===== 工艺 ===== */
+.craft{padding:100px 0;background:var(--brown);color:var(--cream);position:relative;overflow:hidden}
+.craft::before{
+  content:"";position:absolute;inset:0;
+  background-image:radial-gradient(circle at 85% 15%,rgba(201,162,39,.13) 0%,transparent 40%),
+                   radial-gradient(circle at 10% 90%,rgba(201,162,39,.08) 0%,transparent 45%);
+}
+.craft .container{position:relative}
+.craft .section-head h2{color:var(--gold-light)}
+.craft .section-head p{color:rgba(253,246,227,.7)}
+.craft .section-head .kicker{color:var(--gold-light)}
+.craft .section-head .kicker::before,.craft .section-head .kicker::after{background:var(--gold-light)}
+.craft-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:20px}
+.craft-step{
+  padding:34px 24px;background:rgba(255,255,255,.045);
+  border:1px solid rgba(232,201,90,.16);border-radius:4px;
+  transition:all .4s;position:relative;
+}
+.craft-step:hover{background:rgba(232,201,90,.1);border-color:rgba(232,201,90,.4);transform:translateY(-6px)}
+.craft-step .num{
+  font-family:Georgia,serif;font-size:44px;color:rgba(232,201,90,.28);
+  line-height:1;margin-bottom:16px;font-weight:700;
+}
+.craft-step h4{font-size:17.5px;color:var(--gold-light);margin-bottom:10px}
+.craft-step p{font-size:13.5px;color:rgba(253,246,227,.68);line-height:1.8}
+.craft-quote{
+  margin-top:60px;padding:36px 40px;border-left:3px solid var(--gold);
+  background:rgba(232,201,90,.07);border-radius:0 4px 4px 0;
+  font-family:Georgia,"STZhongsong",serif;font-size:18px;color:var(--cream);
+  line-height:1.9;
+}
+.craft-quote small{display:block;margin-top:12px;font-size:13px;color:var(--gold-light);letter-spacing:.1em;font-family:inherit}
+
+/* ===== 数据 ===== */
+.stats-strip{padding:70px 0;background:var(--cream)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.stat-item b{
+  display:block;font-family:Georgia,serif;font-size:clamp(34px,4.4vw,52px);
+  color:var(--gold-dark);line-height:1.1;font-weight:700;
+}
+.stat-item b span{font-size:.55em}
+.stat-item small{font-size:13px;color:var(--text-mid);letter-spacing:.12em;display:block;margin-top:8px}
+
+/* ===== 口碑 ===== */
+.reviews{padding:100px 0;background:var(--cream-dark);position:relative;overflow:hidden}
+.reviews .section-head h2{color:var(--brown)}
+.review-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.review-card{
+  background:var(--cream);border-radius:4px;padding:32px 28px;
+  border:1px solid var(--border);position:relative;
+}
+.review-card::before{
+  content:"“";position:absolute;top:8px;right:24px;font-family:Georgia,serif;
+  font-size:80px;color:rgba(201,162,39,.2);line-height:1;
+}
+.review-stars{color:var(--gold);font-size:15px;letter-spacing:3px;margin-bottom:16px}
+.review-card p{font-size:14.5px;color:var(--text-mid);line-height:1.9;margin-bottom:22px;position:relative}
+.review-user{display:flex;align-items:center;gap:12px}
+.review-avatar{
+  width:42px;height:42px;border-radius:50%;
+  background:linear-gradient(145deg,var(--gold-light),var(--gold-dark));
+  display:flex;align-items:center;justify-content:center;color:#fff;
+  font-family:Georgia,serif;font-weight:700;font-size:17px;
+}
+.review-user b{display:block;font-size:14px;color:var(--brown)}
+.review-user small{font-size:12px;color:var(--text-light)}
+
+/* ===== 社区/动态 ===== */
+.community{padding:100px 0;background:var(--cream)}
+.community-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;flex-wrap:wrap;gap:20px}
+.community-header .section-head{text-align:left;margin-bottom:0}
+.community-header .section-head .kicker{padding-left:0}
+.community-header .section-head .kicker::before,.community-header .section-head .kicker::after{display:none}
+.community-link{font-size:14px;color:var(--red);font-weight:600;letter-spacing:.06em}
+.news-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:26px}
+.news-card{
+  border:1px solid var(--border);border-radius:4px;overflow:hidden;
+  transition:all .35s;background:var(--cream);cursor:pointer;
+}
+.news-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(61,40,23,.12);border-color:var(--gold)}
+.news-cover{
+  height:172px;position:relative;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,var(--brown-light),var(--brown));overflow:hidden;
+}
+.news-cover svg{width:52%;opacity:.9}
+.news-cover .date-chip{
+  position:absolute;top:14px;left:14px;background:rgba(42,28,16,.7);
+  color:var(--gold-light);font-size:11.5px;padding:4px 12px;border-radius:30px;
+  letter-spacing:.08em;backdrop-filter:blur(4px);
+}
+.news-body{padding:22px 22px 26px}
+.news-body .cat{font-size:11.5px;color:var(--gold-dark);letter-spacing:.18em;margin-bottom:8px}
+.news-body h3{font-size:17px;color:var(--brown);margin-bottom:10px;line-height:1.5}
+.news-body p{font-size:13.5px;color:var(--text-mid);line-height:1.75;margin-bottom:14px}
+.news-body .meta{font-size:12px;color:var(--text-light);display:flex;gap:16px}
+
+/* ===== 视频/频道 ===== */
+.video-section{padding:100px 0;background:var(--brown);color:var(--cream);position:relative;overflow:hidden}
+.video-section::before{
+  content:"";position:absolute;top:0;left:0;width:100%;height:100%;
+  background:radial-gradient(circle at 12% 20%,rgba(201,162,39,.12) 0%,transparent 42%);
+}
+.video-section .container{position:relative}
+.video-section .section-head h2{color:var(--gold-light)}
+.video-section .section-head p{color:rgba(253,246,227,.7)}
+.video-section .section-head .kicker{color:var(--gold-light)}
+.video-section .section-head .kicker::before,.video-section .section-head .kicker::after{background:var(--gold-light)}
+.video-layout{display:grid;grid-template-columns:1.5fr 1fr;gap:34px;align-items:stretch}
+.video-main{
+  border-radius:4px;overflow:hidden;position:relative;aspect-ratio:16/9;
+  background:linear-gradient(135deg,#2a1c10,#4a3320);display:flex;align-items:center;justify-content:center;
+  border:1px solid rgba(232,201,90,.25);
+}
+.video-main .play-btn{
+  width:82px;height:82px;border-radius:50%;background:rgba(232,201,90,.92);
+  display:flex;align-items:center;justify-content:center;cursor:pointer;
+  transition:all .35s;box-shadow:0 0 0 0 rgba(232,201,90,.5);animation:pulse-ring 2.5s infinite;
+}
+.video-main .play-btn:hover{transform:scale(1.1);background:#fff}
+.video-main .play-btn svg{width:30px;height:30px;margin-left:5px}
+@keyframes pulse-ring{
+  0%{box-shadow:0 0 0 0 rgba(232,201,90,.4)}
+  70%{box-shadow:0 0 0 26px rgba(232,201,90,0)}
+  100%{box-shadow:0 0 0 0 rgba(232,201,90,0)}
+}
+.video-main .video-label{
+  position:absolute;bottom:20px;left:24px;right:24px;display:flex;justify-content:space-between;
+  align-items:flex-end;flex-wrap:wrap;gap:10px;
+}
+.video-main .video-label b{font-size:19px;color:#fff;font-family:Georgia,"STZhongsong",serif}
+.video-main .video-label small{font-size:12.5px;color:rgba(253,246,227,.7);display:block;margin-top:4px}
+.video-main .video-label .dur{
+  font-size:12px;color:var(--gold-light);border:1px solid rgba(232,201,90,.4);
+  padding:3px 12px;border-radius:30px;letter-spacing:.06em;
+}
+.video-list{display:flex;flex-direction:column;gap:16px}
+.video-item{
+  display:flex;gap:16px;padding:14px;border-radius:4px;cursor:pointer;
+  border:1px solid rgba(232,201,90,.14);transition:all .3s;background:rgba(255,255,255,.03);
+}
+.video-item:hover{background:rgba(232,201,90,.1);border-color:rgba(232,201,90,.35);transform:translateX(4px)}
+.video-thumb{
+  width:104px;height:66px;flex-shrink:0;border-radius:3px;
+  background:linear-gradient(135deg,#4a3320,#2a1c10);display:flex;align-items:center;justify-content:center;
+  position:relative;
+}
+.video-thumb::after{
+  content:"";width:0;height:0;border-left:12px solid var(--gold-light);
+  border-top:8px solid transparent;border-bottom:8px solid transparent;margin-left:3px;
+}
+.video-item .vi-body b{font-size:14px;color:var(--cream);display:block;line-height:1.5;margin-bottom:5px}
+.video-item .vi-body small{font-size:12px;color:rgba(253,246,227,.55)}
+
+/* ===== 加盟/联系 ===== */
+.join{padding:100px 0;background:var(--cream);position:relative}
+.join-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.join-info h2{font-size:clamp(26px,3vw,38px);color:var(--brown);margin-bottom:18px}
+.join-info > p{color:var(--text-mid);font-size:15px;line-height:1.95;margin-bottom:34px}
+.join-list{display:flex;flex-direction:column;gap:22px}
+.join-item{display:flex;gap:16px;align-items:flex-start}
+.join-item .ic{
+  width:44px;height:44px;flex-shrink:0;border-radius:4px;
+  background:var(--cream-dark);display:flex;align-items:center;justify-content:center;
+  color:var(--gold-dark);
+}
+.join-item b{display:block;font-size:15.5px;color:var(--brown);margin-bottom:3px}
+.join-item span{font-size:13.5px;color:var(--text-mid)}
+.join-form{
+  background:#fff;border:1px solid var(--border);border-radius:6px;
+  padding:38px 34px;box-shadow:0 20px 50px rgba(61,40,23,.08);
+}
+.join-form h3{font-size:21px;color:var(--brown);margin-bottom:6px}
+.join-form .sub{font-size:13px;color:var(--text-light);margin-bottom:26px}
+.form-row{margin-bottom:18px}
+.form-row label{display:block;font-size:13px;color:var(--brown-light);margin-bottom:7px;font-weight:600}
+.form-row input,.form-row textarea,.form-row select{
+  width:100%;padding:12px 14px;border:1px solid var(--border);border-radius:3px;
+  font-family:inherit;font-size:14px;color:var(--text-dark);background:var(--cream);
+  transition:border .3s;outline:none;
+}
+.form-row input:focus,.form-row textarea:focus,.form-row select:focus{border-color:var(--gold);background:#fff}
+.form-row textarea{resize:vertical;min-height:84px}
+.form-submit{width:100%;margin-top:8px}
+.form-tip{font-size:11.5px;color:var(--text-light);text-align:center;margin-top:14px}
+
+/* ===== FAQ ===== */
+.faq{padding:100px 0;background:var(--cream-dark)}
+.faq-list{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.faq-item{background:var(--cream);border:1px solid var(--border);border-radius:4px;overflow:hidden}
+.faq-q{
+  padding:20px 24px;display:flex;justify-content:space-between;align-items:center;
+  cursor:pointer;font-size:15.5px;color:var(--brown);font-weight:600;transition:background .3s;
+}
+.faq-q:hover{background:var(--cream-dark)}
+.faq-q .plus{font-size:22px;color:var(--gold-dark);transition:transform .35s;line-height:1;flex-shrink:0;margin-left:16px}
+.faq-item.open .faq-q .plus{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .4s ease;padding:0 24px}
+.faq-item.open .faq-a{max-height:300px;padding:0 24px 22px}
+.faq-a p{font-size:14px;color:var(--text-mid);line-height:1.9}
+
+/* ===== 页脚 ===== */
+footer{background:var(--brown);color:rgba(253,246,227,.75);padding:64px 0 0}
+.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:44px;padding-bottom:50px}
+.footer-brand .logo-mark{width:50px;height:50px;font-size:20px}
+.footer-brand p{font-size:13.5px;line-height:1.9;margin-top:18px;max-width:290px;color:rgba(253,246,227,.6)}
+.footer-social{display:flex;gap:12px;margin-top:22px}
+.footer-social a{
+  width:38px;height:38px;border-radius:50%;border:1px solid rgba(232,201,90,.25);
+  display:flex;align-items:center;justify-content:center;color:var(--gold-light);
+  transition:all .3s;font-size:13px;
+}
+.footer-social a:hover{background:var(--gold);color:var(--brown);border-color:var(--gold);transform:translateY(-3px)}
+.footer-col h4{font-size:14.5px;color:var(--gold-light);margin-bottom:20px;letter-spacing:.1em;font-family:inherit}
+.footer-col ul{display:flex;flex-direction:column;gap:12px}
+.footer-col ul a{font-size:13.5px;color:rgba(253,246,227,.65);transition:color .3s}
+.footer-col ul a:hover{color:var(--gold-light)}
+.footer-contact li{font-size:13.5px;line-height:1.8;color:rgba(253,246,227,.65);display:flex;gap:10px;margin-bottom:14px}
+.footer-contact li b{color:var(--gold-light);font-weight:600;flex-shrink:0}
+.footer-bottom{
+  border-top:1px solid rgba(232,201,90,.15);padding:24px 0;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
+  font-size:12.5px;color:rgba(253,246,227,.45);
+}
+.footer-bottom .links{display:flex;gap:22px;flex-wrap:wrap}
+.footer-bottom .links a:hover{color:var(--gold-light)}
+
+/* ===== 回到顶部 ===== */
+.to-top{
+  position:fixed;right:26px;bottom:26px;width:46px;height:46px;border-radius:50%;
+  background:var(--brown);color:var(--gold-light);display:flex;align-items:center;justify-content:center;
+  cursor:pointer;z-index:90;opacity:0;pointer-events:none;transition:all .35s;
+  box-shadow:0 8px 24px rgba(42,28,16,.3);border:1px solid rgba(232,201,90,.3);
+}
+.to-top.show{opacity:1;pointer-events:auto}
+.to-top:hover{background:var(--gold);color:var(--brown);transform:translateY(-4px)}
+
+/* ===== 响应式 ===== */
+@media(max-width:1024px){
+  .hero-grid{grid-template-columns:1fr;gap:50px}
+  .hero-visual{order:-1;max-width:360px;margin:0 auto}
+  .about-grid,.join-grid{grid-template-columns:1fr;gap:50px}
+  .product-grid,.review-wrap{grid-template-columns:1fr 1fr}
+  .craft-steps{grid-template-columns:1fr 1fr}
+  .news-grid{grid-template-columns:1fr 1fr}
+  .video-layout{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .stats-grid{grid-template-columns:1fr 1fr;gap:30px}
+  .about-badge{right:8px;bottom:-18px;width:100px;height:100px}
+  .about-badge b{font-size:27px}
+}
+@media(max-width:768px){
+  .nav-links{
+    position:fixed;top:0;right:0;width:min(78%,320px);height:100vh;
+    background:var(--cream);flex-direction:column;padding:100px 36px 40px;gap:26px;
+    transform:translateX(100%);transition:transform .4s;box-shadow:-10px 0 40px rgba(0,0,0,.1);
+    border-left:1px solid var(--border);z-index:105;
+  }
+  .nav-links.open{transform:translateX(0)}
+  .nav-links a{font-size:16px}
+  .burger{display:flex;z-index:110}
+  .burger.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger.active span:nth-child(2){opacity:0}
+  .burger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .nav-cta .phone{display:none}
+  .hero{padding:60px 0 70px}
+  .hero-stats{gap:26px}
+  .product-grid,.review-wrap,.news-grid{grid-template-columns:1fr}
+  .craft-steps{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr;gap:36px}
+  .section-head{margin-bottom:40px}
+  .about,.products,.craft,.reviews,.community,.video-section,.join,.faq,.stats-strip{padding:64px 0}
+  .craft-quote{padding:26px 24px;font-size:16px}
+  .hero-tag.t3{display:none}
+  .faq-item.open .faq-a{max-height:420px}
+}
+@media(max-width:520px){
+  .container{padding:0 18px}
+  .hero-actions .btn{width:100%;text-align:center}
+  .join-form{padding:28px 22px}
+  .topbar .container{justify-content:center}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 顶部信息条 -->
+<div class="topbar">
+  <div class="container">
+    <span>✦ 始于 1931 · 九一麻花制作厂 · 匠心传承九十余载</span>
+    <span>每日现炸现卖 · 全国顺丰冷链直达 · 400-1931-091</span>
+  </div>
+</div>
+
+<!-- 导航 -->
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#top" class="logo">
+      <div class="logo-mark">九一</div>
+      <div class="logo-text">
+        <b>九一麻花制作厂</b>
+        <small>JI UYI MAHUA · SINCE 1931</small>
+      </div>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">品牌故事</a>
+      <a href="#products">产品系列</a>
+      <a href="#craft">制作工艺</a>
+      <a href="#video">影像频道</a>
+      <a href="#community">社区动态</a>
+      <a href="#join">合作加盟</a>
+    </nav>
+    <div class="nav-cta">
+      <div class="phone">400-1931-091<small>服务热线</small></div>
+      <a href="#join" class="btn btn-primary" style="padding:10px 26px">立即咨询</a>
+      <div class="burger" id="burger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <div class="hero-badge"><span class="dot"></span>百年老字号 · 非物质文化遗产技艺</div>
+      <h1>九一麻花制作厂
+        <span class="accent">一 根 麻 花 · 九 十 余 年</span>
+      </h1>
+      <div class="hero-slogan">酥脆有魂 · 香甜有根</div>
+      <p class="desc">
+        从街边一口油锅，到今天的现代化制作车间，九一麻花制作厂始终坚守手工搓条、老面发酵的古法工艺。我们相信，真正的美味来自时间的沉淀与双手的温度。
+      </p>
+      <div class="hero-actions">
+        <a href="#products" class="btn btn-primary">探索产品系列</a>
+        <a href="#video" class="btn btn-outline">观看品牌影像</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b>1931</b><span>创立年份</span></div>
+        <div class="stat"><b>94<span style="font-size:16px">年</span></b><span>匠心传承</span></div>
+        <div class="stat"><b>36</b><span>道手工工序</span></div>
+        <div class="stat"><b>200<span style="font-size:16px">万+</span></b><span>年销量（根）</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="twist-wrap">
+        <div class="twist-ring"></div>
+        <div class="twist-ring inner"></div>
+        <svg class="twist-svg" viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="mh" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#f0d878"/>
+              <stop offset="45%" stop-color="#c9a227"/>
+              <stop offset="100%" stop-color="#8a6d14"/>
+            </linearGradient>
+            <linearGradient id="mh2" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#e8c95a"/>
+              <stop offset="50%" stop-color="#a8841c"/>
+              <stop offset="100%" stop-color="#6b520f"/>
+            </linearGradient>
+          </defs>
+          <g transform="rotate(-6 100 130)">
+            <path d="M70 14 C50 50, 130 80, 100 118 C70 156, 150 186, 118 224"
+                  fill="none" stroke="url(#mh2)" stroke-width="15" stroke-linecap="round"/>
+            <path d="M130 14 C110 50, 190 80, 140 118 C110 156, 170 186, 138 224"
+                  fill="none" stroke="url(#mh)" stroke-width="15" stroke-linecap="round"/>
+            <path d="M100 14 C80 50, 160 80, 120 118 C90 156, 170 186, 128 224"
+                  fill="none" stroke="url(#mh2)" stroke-width="14" stroke-linecap="round" opacity=".85"/>
+            <ellipse cx="100" cy="238" rx="34" ry="8" fill="rgba(0,0,0,.25)"/>
+          </g>
+        </svg>
+      </div>
+      <div class="hero-tag t1"><i></i>古法老面发酵 · 12 小时慢醒</div>
+      <div class="hero-tag t2"><i></i>纯正植物油炸制 · 无添加</div>
+      <div class="hero-tag t3"><i></i>每日新鲜直供</div>
+    </div>
+  </div>
+</section>
+
+<!-- 走马灯 -->
+<div class="marquee">
+  <div class="marquee-track" id="marqueeTrack">
+    <span>手工搓条八股</span><span>老面十二时辰慢醒</span><span>非遗传人监制</span>
+    <span>现炸现发货</span><span>三十六道工序</span><span>酥脆不掉渣</span>
+    <span>手工搓条八股</span><span>老面十二时辰慢醒</span><span>非遗传人监制</span>
+    <span>现炸现发货</span><span>三十六道工序</span><span>酥脆不掉渣</span>
+  </div>
+</div>
+
+<!-- 品牌故事 -->
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-visual">
+      <div class="about-frame">
+        <svg viewBox="0 0 220 280" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="af1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#e8c95a"/><stop offset="100%" stop-color="#8a6d14"/>
+            </linearGradient>
+          </defs>
+          <g transform="translate(110 130)">
+            <circle r="80" fill="none" stroke="rgba(232,201,90,.3)" stroke-width="1" stroke-dasharray="4 6"/>
+            <circle r="60" fill="none" stroke="rgba(232,201,90,.2)" stroke-width="1"/>
+            <path d="M-40 -50 C-70 -10, 20 10, -10 50 C-40 90, 50 100, 20 130"
+                  fill="none" stroke="url(#af1)" stroke-width="13" stroke-linecap="round" transform="translate(0 -40)"/>
+            <path d="M20 -50 C-10 -10, 70 10, 20 50 C-10 90, 70 100, 40 130"
+                  fill="none" stroke="url(#af1)" stroke-width="13" stroke-linecap="round" opacity=".75" transform="translate(0 -40)"/>
+            <text x="0" y="105" text-anchor="middle" font-family="Georgia,serif" font-size="15"
+                  fill="rgba(232,201,90,.7)" letter-spacing="4">1931</text>
+          </g>
+        </svg>
+      </div>
+      <div class="about-badge"><b>94</b><span>年 · 匠 心</span></div>
+    </div>
+    <div class="about-text">
+      <div class="section-head">
+        <div class="kicker">Brand Story · 品牌故事</div>
+        <h2>从一口油锅，到一座城的味觉记忆</h2>
+      </div>
+      <p>
+        1931 年，创始人周九一在老城南门口支起第一口油锅，以“九分面、一分油”的独家配比炸出第一锅麻花。街坊们说，这麻花“咬着有劲儿，嚼着有香，咽下还有回甘”，从此“九一麻花”的名号便在坊间传开。
+      </p>
+      <p>
+        历经四代人接力，九一麻花制作厂始终没有丢掉那口老面引子和手工搓条的老手艺。今天，我们在保留古法工序的基础上引入标准化车间，让更多人能吃到那份带着温度的老味道。
+      </p>
+      <div class="about-features">
+        <div class="about-feature">
+          <div class="ic">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.5 6.5L21 9l-5 4.5L17.5 21 12 17.5 6.5 21 8 13.5 3 9l6.5-.5z"/></svg>
+          </div>
+          <div><b>非遗手工技艺</b><small>市级非物质文化遗产项目保护单位</small></div>
+        </div>
+        <div class="about-feature">
+          <div class="ic">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          </div>
+          <div><b>零防腐添加</b><small>配料表干干净净，只有面、油、糖</small></div>
+        </div>
+        <div class="about-feature">
+          <div class="ic">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          </div>
+          <div><b>当日现炸直发</b><small>下单后 24 小时内炸制发货</small></div>
+        </div>
+        <div class="about-feature">
+          <div class="ic">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+          </div>
+          <div><b>标准化生产车间</b><small>全流程温控与品质追溯体系</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 数据 -->
+<section class="stats-strip">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item"><b data-count="94">0</b><small>年 传 承 之 路</small></div>
+      <div class="stat-item"><b data-count="36">0</b><small>道 手 工 工 序</small></div>
+      <div class="stat-item"><b data-count="200">0<span>万+</span></b><small>年 销 量（根）</small></div>
+      <div class="stat-item"><b data-count="128">0</b><small>城 市 覆 盖</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- 产品系列 -->
+<section class="products" id="products">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Product Series · 产品系列</div>
+      <h2>一厂百味，各有各的酥脆</h2>
+      <p>九一麻花制作厂以经典八股麻花为根基，延伸出甜、咸、夹馅、轻食等多元系列，满足不同场景下的味蕾期待。</p>
+    </div>
+    <div class="product-grid">
+
+      <div class="product-card">
+        <div class="product-icon">
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#5c3d24" stroke-width="2.6" stroke-linecap="round">
+            <path d="M16 4c-6 8 8 14 2 22s10 12 4 18"/>
+            <path d="M32 4c-6 8 8 14 2 22s10 12 4 18" opacity=".7"/>
+          </svg>
+        </div>
+        <h3>经典八股酥</h3>
+        <div class="tagline">CLASSIC · 招牌之作</div>
+        <p>老面发酵十二时辰，手工搓出八股绞花，入锅九成热油炸至金红。入口酥得清脆，落口脆得干净。</p>
+        <div class="product-meta"><em>原味</em><em>甜度适中</em><em>250g / 袋</em></div>
+        <a href="#join" class="product-link">了解详情 →</a>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#5c3d24" stroke-width="2.6" stroke-linecap="round">
+            <path d="M14 6c-4 6 6 10 1 16s8 10 3 16"/>
+            <path d="M28 6c-4 6 6 10 1 16s8 10 3 16" opacity=".7"/>
+            <circle cx="38" cy="12" r="3"/>
+            <circle cx="10" cy="34" r="2.4"/>
+          </svg>
+        </div>
+        <h3>椒盐咸香麻花</h3>
+        <div class="tagline">SALTY · 咸口新宠</div>
+        <p>精选汉源花椒与海盐炒制入味，咸香里透着微麻回甘，配茶配酒皆宜，是许多老客的私藏之选。</p>
+        <div class="product-meta"><em>椒盐</em><em>微麻回甘</em><em>250g / 袋</em></div>
+        <a href="#join" class="product-link">了解详情 →</a>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#5c3d24" stroke-width="2.6" stroke-linecap="round">
+            <path d="M16 4c-6 8 8 14 2 22s10 12 4 18"/>
+            <path d="M32 4c-6 8 8 14 2 22s10 12 4 18" opacity=".7"/>
+            <circle cx="24" cy="24" r="15" stroke-dasharray="3 4"/>
+          </svg>
+        </div>
+        <h3>桂花蜜馅麻花</h3>
+        <div class="tagline">SWEET · 香甜夹心</div>
+        <p>金桂糖渍入馅，裹进层层绞花中。咬开的一瞬桂花香先到，甜意在舌尖慢慢化开，适合午后小食。</p>
+        <div class="product-meta"><em>桂花蜜</em><em>清甜</em><em>220g / 袋</em></div>
+        <a href="#join" class="product-link">了解详情 →</a>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#5c3d24" stroke-width="2.6" stroke-linecap="round">
+            <path d="M17 5c-5 7 7 12 2 20s9 11 4 17"/>
+            <path d="M31 5c-5 7 7 12 2 20s9 11 4 17" opacity=".55"/>
+            <path d="M6 40h36" stroke-dasharray="3 4"/>
+          </svg>
+        </div>
+        <h3>轻食小麻花</h3>
+        <div class="tagline">LIGHT · 一口一个</div>
+        <p>缩短炸制时间，减少油分残留，做成拇指大小的迷你麻花。办公室、追剧、旅行时的解馋轻零食。</p>
+        <div class="product-meta"><em>迷你装</em><em>低油</em><em>150g / 罐</em></div>
+        <a href="#join" class="product-link">了解详情 →</a>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#5c3d24" stroke-width="2.6" stroke-linecap="round">
+            <path d="M18 4c-6 8 8 14 2 22s10 12 4 18"/>
+            <path d="M34 4c-6 8 8 14 2 22s10 12 4 18" opacity=".7"/>
+            <path d="M12 24c6-4 18-4 24 0" stroke-dasharray="2 4"/>
+          </svg>
+        </div>
+        <h3>红糖老面麻花</h3>
+        <div class="tagline">BROWN SUGAR · 古法焦香</div>
+        <p>云南古法红糖熬浆挂霜，焦香浓郁不齁甜。是老一辈人念念不忘的那口“旧时甜味”。</p>
+        <div class="product-meta"><em>古法红糖</em><em>焦香</em><em>250g / 袋</em></div>
+        <a href="#join" class="product-link">了解详情 →</a>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#5c3d24" stroke-width="2.6" stroke-linecap="round">
+            <path d="M16 4c-6 8 8 14 2 22s10 12 4 18"/>
+            <path d="M32 4c-6 8 8 14 2 22s10 12 4 18" opacity=".7"/>
+            <path d="M24 2v44" stroke-dasharray="2 5"/>
+          </svg>
+        </div>
+        <h3>节庆礼盒装</h3>
+        <div class="tagline">GIFT · 心意之选</div>
+        <p>六种口味组合，配以手工麻绳捆扎与烫金礼盒，是逢年过节、走亲访友时的一份朴素心意。</p>
+        <div class="product-meta"><em>6 味组合</em><em>礼盒</em><em>1.2kg / 盒</em></div>
+        <a href="#join" class="product-link">了解详情 →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 制作工艺 -->
+<section class="craft" id="craft">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Craftsmanship · 制作工艺</div>
+      <h2>三十六道工序，少一道都不叫九一</h2>
+      <p>从选面到出锅，每一根麻花都要经过三十六道明确工序，全程手工与经验的双重把关。</p>
+    </div>
+    <div class="craft-steps">
+      <div class="craft-step">
+        <div class="num">01</div>
+        <h4>选面与和面</h4>
+        <p>只用当年新麦中筋粉，配古井水与老面引子，根据天气湿度实时调整碱水比例，和至面团光洁不粘手。</p>
+      </div>
+      <div class="craft-step">
+        <div class="num">02</div>
+        <h4>老面慢醒</h4>
+        <p>低温环境下醒发十二个时辰，让面团在缓慢发酵中形成层次，这是麻花“外脆内酥”的根本。</p>
+      </div>
+      <div class="craft-step">
+        <div class="num">03</div>
+        <h4>手工搓条</h4>
+        <p>师傅双手发力，将面搓成均匀八股再绞成麻花辫，每一股的粗细与松紧都要一致，全凭手感。</p>
+      </div>
+      <div class="craft-step">
+        <div class="num">04</div>
+        <h4>控温炸制</h4>
+        <p>纯正菜籽油，九成热下锅，师傅凭经验翻炸上色，出锅瞬间麻花色泽红亮，香气四溢。</p>
+      </div>
+    </div>
+    <div class="craft-quote">
+      “机器可以复制形状，却复制不了那口老面的呼吸。九一的每一根麻花，都是时间与手心的合作。”
+      <small>—— 九一麻花制作厂 · 第三代传人 · 周记棠</small>
+    </div>
+  </div>
+</section>
+
+<!-- 口碑 -->
+<section class="reviews">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Voices · 食客口碑</div>
+      <h2>吃过的人，都记得这口酥</h2>
+      <p>来自不同城市的真实反馈，是九一麻花制作厂继续炸下去的理由。</p>
+    </div>
+    <div class="review-wrap">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>从小吃到大的味道，现在嫁到外地，每年都让家里寄两箱。包装越来越讲究，但那股老面香一点没变，咬下去还是小时候那个脆。</p>
+        <div class="review-user">
+          <div class="review-avatar">陈</div>
+          <div><b>陈女士</b><small>杭州 · 忠实顾客</small></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>椒盐味真的很惊喜，咸得恰到好处，带一点点麻，配着一壶茶能坐一下午。办公室下午茶订了三次，同事都问链接。</p>
+        <div class="review-user">
+          <div class="review-avatar">李</div>
+          <div><b>李先生</b><small>深圳 · 企业采购</small></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>给爸妈买的，老爷子吃完说“这才是麻花”，还特地打电话给我说下次多买两袋。能让老人家说这句话的，不多。</p>
+        <div class="review-user">
+          <div class="review-avatar">王</div>
+          <div><b>王小姐</b><small>成都 · 网购用户</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 影像频道 -->
+<section class="video-section" id="video">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Video Channel · 影像频道</div>
+      <h2>镜头里的九一，看得见的酥脆</h2>
+      <p>我们用镜头记录下老手艺的每一个瞬间，也记录下麻花出锅时那股挡不住的香。</p>
+    </div>
+    <div class="video-layout">
+      <div class="video-main">
+        <div class="play-btn" id="playBtn">
+          <svg viewBox="0 0 24 24" fill="#3d2817"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <div class="video-label">
+          <div>
+            <b>凌晨四点，第一锅麻花出锅</b>
+            <small>品牌纪录片 · 第一集 · 匠心守味</small>
+          </div>
+          <span class="dur">08:42</span>
+        </div>
+      </div>
+      <div class="video-list">
+        <div class="video-item">
+          <div class="video-thumb"></div>
+          <div class="vi-body"><b>手搓八股：三十年的手感是怎样练成的</b><small>技艺揭秘 · 06:18</small></div>
+        </div>
+        <div class="video-item">
+          <div class="video-thumb"></div>
+          <div class="vi-body"><b>老面十二时辰：时间的味道</b><small>工艺纪录片 · 09:05</small></div>
+        </div>
+        <div class="video-item">
+          <div class="video-thumb"></div>
+          <div class="vi-body"><b>九一麻花制作厂的一天</b><small>工厂探访 · 12:30</small></div>
+        </div>
+        <div class="video-item">
+          <div class="video-thumb"></div>
+          <div class="vi-body"><b>非遗传承人周记棠访谈</b><small>人物访谈 · 15:22</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 社区动态 -->
+<section class="community" id="community">
+  <div class="container">
+    <div class="community-header">
+      <div class="section-head">
+        <div class="kicker">Community · 社区动态</div>
+        <h2>九一新鲜事</h2>
+      </div>
+      <a href="#join" class="community-link">查看全部动态 →</a>
+    </div>
+    <div class="news-grid">
+      <div class="news-card">
+        <div class="news-cover">
+          <span class="date-chip">2025.03.18</span>
+          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#e8c95a" stroke-width="2.4" stroke-linecap="round">
+            <path d="M40 10c-14 18 18 30 4 50s22 28 8 50"/>
+            <path d="M80 10c-14 18 18 30 4 50s22 28 8 50" opacity=".65"/>
+            <circle cx="60" cy="60" r="52" stroke-dasharray="3 6" opacity=".4"/>
+          </svg>
+        </div>
+        <div class="news-body">
+          <div class="cat">品牌新闻</div>
+          <h3>九一麻花制作厂非遗工坊正式开放预约参观</h3>
+          <p>每周六上午开放两场非遗工坊参观，可现场体验手工搓条，了解老面发酵的全过程。</p>
+          <div class="meta"><span>阅读 3,842</span><span>评论 126</span></div>
+        </div>
+      </div>
+      <div class="news-card">
+        <div class="news-cover">
+          <span class="date-chip">2025.02.26</span>
+          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#e8c95a" stroke-width="2.4" stroke-linecap="round">
+            <circle cx="60" cy="46" r="22"/>
+            <path d="M60 24v-12M60 80v14M84 46h14M22 46h14M78 28l10-10M42 28L32 18M78 64l10 10M42 64L32 74" opacity=".65"/>
+          </svg>
+        </div>
+        <div class="news-body">
+          <div class="cat">产品上新</div>
+          <h3>春日限定 · 艾草清香麻花即将上市</h3>
+          <p>取当季艾草嫩芽入面，清香里带着回甘，清明前后限量供应，售完即止。</p>
+          <div class="meta"><span>阅读 2,510</span><span>评论 88</span></div>
+        </div>
+      </div>
+      <div class="news-card">
+        <div class="news-cover">
+          <span class="date-chip">2025.01.14</span>
+          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#e8c95a" stroke-width="2.4" stroke-linecap="round">
+            <path d="M28 100V40l32-24 32 24v60"/>
+            <path d="M46 100V70h28v30"/>
+            <path d="M20 100h80" opacity=".65"/>
+          </svg>
+        </div>
+        <div class="news-body">
+          <div class="cat">社区活动</div>
+          <h3>“一根麻花的故事”征集活动启动</h3>
+          <p>向所有食客征集与九一麻花有关的记忆与照片，入选故事将收录进品牌年刊。</p>
+          <div class="meta"><span>阅读 4,207</span><span>评论 213</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 加盟 -->
+<section class="join" id="join">
+  <div class="container join-grid">
+    <div class="join-info">
+      <h2>与九一麻花一起，把老味道带到更多城市</h2>
+      <p>我们开放区域代理与门店合作，提供统一配方培训、物料支持与品牌授权，让每一位合作者都能安心经营一份有温度的老手艺生意。</p>
+      <div class="join-list">
+        <div class="join-item">
+          <div class="ic">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/></svg>
+          </div>
+          <div><b>区域代理</b><span>面向市级及以上市场，提供区域独家授权与全套运营支持。</span></div>
+        </div>
+        <div class="join-item">
+          <div class="ic">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+          </div>
+          <div><b>门店合作</b><span>小型档口、商超专柜均可落地，统一形象、统一物料。</span></div>
+        </div>
+        <div class="join-item">
+          <div class="ic">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          </div>
+          <div><b>技术培训</b><span>非遗工坊师傅带教，从和面到炸制全流程手把手教学。</span></div>
+        </div>
+        <div class="join-item">
+          <div class="ic">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <div><b>供应链支持</b><span>老面引子、专用面粉与菜籽油统一配送，品质稳定可追溯。</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="join-form">
+      <h3>留下您的联系方式</h3>
+      <div class="sub">填写后，我们的合作顾问将在 1 个工作日内与您联系。</div>
+      <form id="joinForm" novalidate>
+        <div class="form-row">
+          <label for="name">您的称呼</label>
+          <input type="text" id="name" name="name" placeholder="请输入姓名" required>
+        </div>
+        <div class="form-row">
+          <label for="phone">联系电话</label>
+          <input type="tel" id="phone" name="phone" placeholder="请输入手机号码" required>
+        </div>
+        <div class="form-row">
+          <label for="city">意向城市</label>
+          <input type="text" id="city" name="city" placeholder="如：浙江省杭州市" required>
+        </div>
+        <div class="form-row">
+          <label for="type">合作类型</label>
+          <select id="type" name="type">
+            <option value="agent">区域代理</option>
+            <option value="store">门店合作</option>
+            <option value="supply">渠道供货</option>
+            <option value="other">其他咨询</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="msg">备注留言</label>
+          <textarea id="msg" name="msg" placeholder="简单描述您的合作设想（选填）"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary form-submit">提交合作意向</button>
+        <div class="form-tip" id="formTip">我们承诺您的信息仅用于合作沟通，绝不外泄。</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">FAQ · 常见问题</div>
+      <h2>您可能想了解的几件事</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item open">
+        <div class="faq-q">九一麻花的保质期是多久？<span class="plus">+</span></div>
+        <div class="faq-a"><p>由于不添加防腐剂，我们的麻花在密封常温条件下建议 30 天内食用完毕，开封后请尽快食用并避免受潮。若需长期保存，可密封后放入冰箱冷藏，口感基本不受影响。</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">发货时间与配送方式是怎样的？<span class="plus">+</span></div>
+        <div class="faq-a"><p>订单确认后，我们会在 24 小时内现炸制作并打包发货，默认采用顺丰冷链或京东物流，全国大部分地区 2-3 天可达。如遇节庆高峰期，发货时间会顺延，我们会提前在页面公告。</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">是否支持企业采购与定制礼盒？<span class="plus">+</span></div>
+        <div class="faq-a"><p>支持。我们为企业客户提供批量采购折扣、定制礼盒包装与 LOGO 烫印服务，起订量 100 盒。请通过合作表单或服务热线 400-1931-091 与我们联系，会有专属顾问对接。</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">加盟需要具备哪些条件？<span class="plus">+</span></div>
+        <div class="faq-a"><p>我们优先考虑有食品经营相关经验、认可品牌理念、具备合法经营资质的合作者。门店建议面积 15 平方米以上，具备基础的排烟与操作条件。具体条件与费用方案会在初步沟通后提供详细说明。</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">可以到工厂参观体验吗？<span class="plus">+</span></div>
+        <div class="faq-a"><p>可以。非遗工坊每周六上午开放两场预约参观，每场限 20 人，可现场体验手工搓条环节并品尝刚出锅的麻花。请提前通过合作表单或热线预约，我们会在参观前一周与您确认。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 页脚 -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo" style="align-items:center">
+          <div class="logo-mark">九一</div>
+          <div class="logo-text">
+            <b style="color:#e8c95a">九一麻花制作厂</b>
+            <small style="color:rgba(232,201,90,.6)">JI UYI MAHUA · SINCE 1931</small>
+          </div>
+        </div>
+        <p>九十四年，只做一件事——把一根麻花炸得酥脆、香甜、有根有魂。让老味道，走得更远一点。</p>
+        <div class="footer-social">
+          <a href="#" title="微信">微</a>
+          <a href="#" title="微博">博</a>
+          <a href="#" title="抖音">抖</a>
+          <a href="#" title="视频号">视</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>品牌探索</h4>
+        <ul>
+          <li><a href="#about">品牌故事</a></li>
+          <li><a href="#craft">制作工艺</a></li>
+          <li><a href="#video">影像频道</a></li>
+          <li><a href="#community">社区动态</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>产品服务</h4>
+        <ul>
+          <li><a href="#products">全部产品</a></li>
+          <li><a href="#products">节庆礼盒</a></li>
+          <li><a href="#join">企业采购</a></li>
+          <li><a href="#join">合作加盟</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>联系我们</h4>
+        <ul class="footer-contact">
+          <li><b>服务热线</b><span>400-1931-091</span></li>
+          <li><b>工厂地址</b><span>老城南门口九一麻花非遗工坊</span></li>
+          <li><b>合作邮箱</b><span>cooperate@jiuyimahua.cn</span></li>
+          <li><b>营业时间</b><span>每日 08:00 - 20:00</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 九一麻花制作厂 · 保留所有权利 · 非遗技艺保护单位</span>
+      <div class="links">
+        <a href="#">隐私政策</a>
+        <a href="#">服务条款</a>
+        <a href="#">网站地图</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="to-top" id="toTop">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* 导航滚动阴影 */
+  var nav = document.getElementById('nav');
+  var toTop = document.getElementById('toTop');
+  function onScroll(){
+    var y = window.scrollY || window.pageYOffset;
+    if(y > 20){ nav.classList.add('scrolled'); } else { nav.classList.remove('scrolled'); }
+    if(y > 500){ toTop.classList.add('show'); } else { toTop.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* 回到顶部 */
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  /* 移动端菜单 */
+  var burger = document.getElementById('burger');
+  var navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', function(){
+    burger.classList.toggle('active');
+    navLinks.classList.toggle('open');
+  });
+  navLinks.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      burger.classList.remove('active');
+      navLinks.classList.remove('open');
+    });
+  });
+
+  /* 数字滚动动画 */
+  var statEls = document.querySelectorAll('[data-count]');
+  var counted = false;
+  function animateCount(el){
+    var target = parseInt(el.getAttribute('data-count'), 10);
+    var suffix = el.querySelector('span') ? el.querySelector('span').outerHTML : '';
+    var duration = 1600;
+    var startTime = null;
+    function step(ts){
+      if(!startTime) startTime = ts;
+      var progress = Math.min((ts - startTime) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      var current = Math.floor(eased * target);
+      el.innerHTML = current + suffix;
+      if(progress < 1){ requestAnimationFrame(step); }
+      else { el.innerHTML = target + suffix; }
+    }
+    requestAnimationFrame(step);
+  }
+  var statsSection = document.querySelector('.stats-strip');
+  if('IntersectionObserver' in window && statsSection){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting && !counted){
+          counted = true;
+          statEls.forEach(animateCount);
+          io.disconnect();
+        }
+      });
+    }, {threshold:.35});
+    io.observe(statsSection);
+  } else {
+    statEls.forEach(animateCount);
+  }
+
+  /* FAQ 折叠 */
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    var q = item.querySelector('.faq-q');
+    q.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(o){ o.classList.remove('open'); });
+      if(!isOpen){ item.classList.add('open'); }
+    });
+  });
+
+  /* 合作表单 */
+  var form = document.getElementById('joinForm');
+  var tip = document.getElementById('formTip');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var name = form.name.value.trim();
+      var phone = form.phone.value.trim();
+      var city = form.city.value.trim();
+      if(!name || !phone || !city){
+        tip.textContent = '请完整填写称呼、电话与意向城市。';
+        tip.style.color = '#b83a2e';
+        return;
+      }
+      if(!/^1[3-9]\d{9}$/.test(phone)){
+        tip.textContent = '请输入有效的 11 位手机号码。';
+        tip.style.color = '#b83a2e';
+        return;
+      }
+      tip.textContent = '提交成功！合作顾问将在 1 个工作日内与您联系。';
+      tip.style.color = '#8a6d14';
+      form.reset();
+    });
+  }
+
+  /* 主视频播放按钮交互 */
+  var playBtn = document.getElementById('playBtn');
+  if(playBtn){
+    playBtn.addEventListener('click', function(){
+      var card = playBtn.closest('.video-main');
+      var label = card.querySelector('.video-label small');
+      var original = label.textContent;
+      label.textContent = '影像加载中，请稍候……';
+      playBtn.style.animation = 'none';
+      playBtn.style.opacity = '.6';
+      setTimeout(function(){
+        label.textContent = original;
+        playBtn.style.opacity = '1';
+        playBtn.style.animation = '';
+      }, 1800);
+    });
+  }
+
+  /* 视频列表点击反馈 */
+  document.querySelectorAll('.video-item').forEach(function(item){
+    item.addEventListener('click', function(){
+      var b = item.querySelector('.vi-body b');
+      var old = b.textContent;
+      b.textContent = '正在接入影像……';
+      setTimeout(function(){ b.textContent = old; }, 1200);
+    });
+  });
+
+  /* 使用 IntersectionObserver 做进版渐显 */
+  var revealEls = document.querySelectorAll(
+    '.product-card, .review-card, .news-card, .craft-step, .join-item, .about-feature, .stat-item'
+  );
+  revealEls.forEach(function(el){
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(28px)';
+    el.style.transition = 'opacity .7s ease, transform .7s ease';
+  });
+  if('IntersectionObserver' in window){
+    var revIO = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          var el = en.target;
+          var idx = Array.prototype.indexOf.call(el.parentNode.children, el);
+          el.style.transitionDelay = (Math.min(idx, 6) * 0.07) + 's';
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+          revIO.unobserve(el);
+        }
+      });
+    }, {threshold:.12});
+    revealEls.forEach(function(el){ revIO.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.style.opacity = '1'; el.style.transform = 'none'; });
+  }
+
+  /* 走马灯备用：如果内容不足两倍宽，复制一次 */
+  var track = document.getElementById('marqueeTrack');
+  if(track){
+    var clone = track.cloneNode(true);
+    clone.style.display = 'inline-flex';
+    track.parentNode.appendChild(clone);
+    // 调整动画时间保持连贯
+    track.style.animationDuration = '32s';
+    clone.style.animationDuration = '32s';
+  }
+
+})();
+</script>
+</body>
+                                                                                                                                                                                                     </html>
